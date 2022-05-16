@@ -65,9 +65,14 @@ DerivedData/
 ### Tuist derived files ###
 graph.dot
 Derived/
-.[cC]ache/
-[cC]ache/
-.[bB]uild
+**/.[cC]ache/
+**/cC]ache/
+**/.[bB]uild
 
 ### Tuist managed dependencies ###
-Tuist/Dependencies
+**/*/*.xcodeproj
+**/*/*.xcworkspace
+**/build/
+**/DerivedData/
+**/Tuist/Dependencies/SwiftPackageManager
+**/Tuist/Dependencies/graph.json

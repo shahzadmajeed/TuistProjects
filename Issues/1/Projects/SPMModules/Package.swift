@@ -5,6 +5,7 @@ import PackageDescription
 
 let package = Package(
     name: Specs.packageName,
+    defaultLocalization: "en",
     platforms: Specs.supportedPlatforms,
     products: Specs.products,
     dependencies: Specs.packageDependencies,
@@ -15,7 +16,7 @@ let package = Package(
 struct Specs {}
 extension Specs {
 
-    static let packageName: String = "Thor"
+    static let packageName: String = "SPMModules"
     
     static let supportedPlatforms: [SupportedPlatform] = [.iOS(.v13)]
     
@@ -27,7 +28,8 @@ extension Specs {
         .allCases
         .map { target in
             target.target(
-                dependencies: target.internalDependencies + target.externalDependencies
+                dependencies: target.internalDependencies + target.externalDependencies,
+                resources: target.resources
             )
         }
 
@@ -51,6 +53,13 @@ enum Targets: String, CaseIterable {
     case menuWidget = "MenuWidget"
     
     var name: String { rawValue }
+    
+    var resources: [Resource]? {
+        switch self {
+            case .styles: return [.process("Fonts")]
+            default: return nil
+        }
+    }
     
     var internalDependencies: [Target.Dependency] {
         var deps: [Targets] = []
@@ -111,10 +120,11 @@ extension Package.Dependency {
 }
 
 extension Targets {
-    func target(dependencies: [Target.Dependency] = []) -> Target {
+    func target(dependencies: [Target.Dependency] = [],
+                resources: [Resource]? = nil) -> Target {
         .target(name: name,
                 dependencies: dependencies,
-                resources: [.process("Resources")])
+                resources: resources)
     }
 }
 
