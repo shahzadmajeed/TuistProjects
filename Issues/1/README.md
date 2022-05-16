@@ -26,7 +26,7 @@ __`TuistProjects/Issues/1/`__
 # How to reproduce?
 1. Run `tuist fetch`
 2. Run `tuist generate`
-3. Notice that project `Thore` will not contain `Assets+Styles.swift`, `Strings+Styles.swift`
+3. Notice that project `Thor` will not contain `Assets+Styles.swift`, `Strings+Styles.swift`
 4. Same happens to other local package targets that contain some resources
 		
 
