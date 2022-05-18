@@ -7,6 +7,18 @@ extension Config {
     
     static let standard: Config = .config()
     
+    static let cache: Cache = .cache(profiles: [simDebugProfile, simReleaseProfile], path: nil)
+    
+    static let simReleaseProfile: Cache.Profile = .profile(name: "Simulator",
+                                                           configuration: "Release",
+                                                           device: "iPhone 13 Pro Max",
+                                                           os: "15.4.0")
+    
+    static let simDebugProfile: Cache.Profile = .profile(name: "Simulator",
+                                                         configuration: "Debug",
+                                                         device: "iPhone 13 Pro Max",
+                                                         os: "15.4.0")
+    
     static func config(compatibleXcodeVersions: ProjectDescription.CompatibleXcodeVersions = .all,
                        cloud: ProjectDescription.Cloud? = nil,
                        cache: ProjectDescription.Cache? = nil,
