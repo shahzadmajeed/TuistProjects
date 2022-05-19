@@ -20,70 +20,78 @@ extension Project {
         externalDependencies
             .map { .external(name: $0) }
         
+        let targetSettings: Settings = .settings(configurations: BuildConfiguration.appBuildConfigurations)
+        let projectSettings: Settings = .settings(configurations: BuildConfiguration.projectBuildConfigurations)
+        
         var targets = makeAppTargets(name: name,
                                      platform: platform,
                                      deploymentTarget: deploymentTarget,
-                                     dependencies: dependencies)
+                                     dependencies: dependencies,
+                                     settings: targetSettings)
         
         targets += additionalTargets.flatMap { (target, dependencies) in
             makeFrameworkTargets(name: target,
                                  platform: platform,
                                  deploymentTarget: deploymentTarget,
-                                 dependencies: dependencies)
+                                 dependencies: dependencies,
+                                 settings: targetSettings)
         }
         
+        let scheme: [Scheme] = targets.flatMap { Scheme.allSchemes(target: $0.name) }
+
         return Project(name: name,
                        organizationName: "tuist.io",
-//                       packages: [
-//                        .local(path: .relativeToRoot("Projects/Thor")),
-//                        .remote(url: "https://github.com/Alamofire/Alamofire",
-//                                requirement: .upToNextMajor(from: "5.0.0"))
-//                       ],
+                       settings: projectSettings,
                        targets: targets,
+                       schemes: scheme,
                        resourceSynthesizers: .default)
     }
-
+    
     // MARK: - Private
-
+    
     /// Helper function to create a framework target and an associated unit test target
     private static func makeFrameworkTargets(name: String,
                                              platform: Platform,
                                              deploymentTarget: DeploymentTarget,
-                                             dependencies: [TargetDependency]) -> [Target] {
+                                             dependencies: [TargetDependency],
+                                             settings: Settings) -> [Target] {
         let sources = Target(name: name,
                              platform: platform,
-                product: .framework,
-                bundleId: "io.tuist.\(name)",
-                deploymentTarget: deploymentTarget,
-                infoPlist: .default,
-                sources: ["Targets/\(name)/Sources/**"],
-                resources: ["Targets/\(name)/Resources/**"],
-                dependencies: dependencies)
+                             product: .framework,
+                             bundleId: "io.tuist.\(name)",
+                             deploymentTarget: deploymentTarget,
+                             infoPlist: .default,
+                             sources: ["Targets/\(name)/Sources/**"],
+                             resources: ["Targets/\(name)/Resources/**"],
+                             dependencies: dependencies,
+                             settings: settings)
         let tests = Target(name: "\(name)Tests",
                            platform: platform,
-                product: .unitTests,
-                bundleId: "io.tuist.\(name)Tests",
-                deploymentTarget: deploymentTarget,
-                infoPlist: .default,
-                sources: ["Targets/\(name)/Tests/**"],
-                resources: [],
-                dependencies: [.target(name: name)])
+                           product: .unitTests,
+                           bundleId: "io.tuist.\(name)Tests",
+                           deploymentTarget: deploymentTarget,
+                           infoPlist: .default,
+                           sources: ["Targets/\(name)/Tests/**"],
+                           resources: [],
+                           dependencies: [.target(name: name)],
+                           settings: settings)
         return [sources, tests]
     }
-
+    
     /// Helper function to create the application target and the unit test target.
     private static func makeAppTargets(name: String,
                                        platform: Platform,
                                        deploymentTarget: DeploymentTarget,
-                                       dependencies: [TargetDependency]) -> [Target] {
+                                       dependencies: [TargetDependency],
+                                       settings: Settings) -> [Target] {
         let platform: Platform = platform
         let infoPlist: [String: InfoPlist.Value] = [
             "CFBundleShortVersionString": "1.0",
             "CFBundleVersion": "1",
             "UIMainStoryboardFile": "",
             "UILaunchStoryboardName": "LaunchScreen"
-            ]
-
+        ]
+        
         let mainTarget = Target(
             name: name,
             platform: platform,
@@ -93,9 +101,10 @@ extension Project {
             infoPlist: .extendingDefault(with: infoPlist),
             sources: ["Targets/\(name)/Sources/**"],
             resources: ["Targets/\(name)/Resources/**"],
-            dependencies: dependencies
+            dependencies: dependencies,
+            settings: settings
         )
-
+        
         let testTarget = Target(
             name: "\(name)Tests",
             platform: platform,
@@ -106,7 +115,8 @@ extension Project {
             sources: ["Targets/\(name)/Tests/**"],
             dependencies: [
                 .target(name: "\(name)")
-        ])
+            ],
+            settings: settings)
         return [mainTarget, testTarget]
     }
 }

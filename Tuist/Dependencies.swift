@@ -1,14 +1,15 @@
 import ProjectDescription
 import ProjectDescriptionHelpers
 
+let projectSettings: Settings = .settings(configurations: BuildConfiguration.projectBuildConfigurations)
+
 let dependencies = Dependencies(
     carthage: [],
     swiftPackageManager: SwiftPackageManagerDependencies(
         [
             .local(path: .relativeToRoot("Projects/SPMModules"))
         ],
-        //productTypes: ["WebBrowserKit": .framework],
-        baseSettings: .settings(),
+        baseSettings: projectSettings,
         targetSettings: [:]
     ),
     platforms: [.iOS]
