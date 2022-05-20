@@ -7,15 +7,15 @@ extension Config {
     
     static let standard: Config = .config()
     
-    static let cache: Cache = .cache(profiles: [simDebugProfile, simReleaseProfile], path: nil)
+    static let cache: Cache = .cache(profiles: [simDebugProfile, simReleaseProfile])
     
     static let simReleaseProfile: Cache.Profile = .profile(name: "Simulator",
-                                                           configuration: "Release",
+                                                           configuration: "Prod",
                                                            device: "iPhone 13 Pro Max",
                                                            os: "15.4.0")
     
     static let simDebugProfile: Cache.Profile = .profile(name: "Simulator",
-                                                         configuration: "Debug",
+                                                         configuration: "Test",
                                                          device: "iPhone 13 Pro Max",
                                                          os: "15.4.0")
     
