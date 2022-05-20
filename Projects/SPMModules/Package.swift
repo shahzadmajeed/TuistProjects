@@ -14,13 +14,7 @@ let package = Package(
                 dependencies: [
                     .product(name: "SnapKit", package: "SnapKit"),
                     .product(name: "Kingfisher", package: "Kingfisher")],
-                resources: [.process("Resources/Fonts")],
-                
-                swiftSettings: [
-                    .define("Test", .when(configuration: .debug)),
-                    .define("ODI", .when(configuration: .debug)),
-                    .define("Prod", .when(configuration: .release))
-                ]
+                resources: [.process("Resources/Fonts")]
                ),
         .testTarget(name: "Feature1Tests", dependencies: ["Feature1"])
     ]

@@ -7,7 +7,9 @@ extension Config {
     
     static let standard: Config = .config()
     
-    static let cache: Cache = .cache(profiles: [simDebugProfile, simReleaseProfile])
+    static let cache: Cache = .cache()
+    
+    //static let cache: Cache = .cache(profiles: [simDebugProfile, simReleaseProfile])
     
     static let simReleaseProfile: Cache.Profile = .profile(name: "Simulator",
                                                            configuration: "Prod",
