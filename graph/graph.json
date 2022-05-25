@@ -1,0 +1,224 @@
+{
+  "name" : "Metaverse-iOS",
+  "path" : "/Volumes/WORKSPACE/WORKSPACE/GITHUB-PUBLIC/TuistProjects",
+  "projects" : {
+    "/Volumes/WORKSPACE/WORKSPACE/GITHUB-PUBLIC/TuistProjects/Projects/SPMModules" : {
+      "isExternal" : true,
+      "name" : "SPMModules",
+      "packages" : [
+
+      ],
+      "path" : "/Volumes/WORKSPACE/WORKSPACE/GITHUB-PUBLIC/TuistProjects/Projects/SPMModules",
+      "schemes" : [
+
+      ],
+      "targets" : [
+        {
+          "name" : "Feature1",
+          "product" : "staticFramework",
+          "sources" : [
+            "/Volumes/WORKSPACE/WORKSPACE/GITHUB-PUBLIC/TuistProjects/Projects/SPMModules/Sources/Feature1/Styles.swift"
+          ]
+        }
+      ]
+    },
+    "/Volumes/WORKSPACE/WORKSPACE/GITHUB-PUBLIC/TuistProjects/Projects/Workbench" : {
+      "isExternal" : false,
+      "name" : "Workbench",
+      "packages" : [
+
+      ],
+      "path" : "/Volumes/WORKSPACE/WORKSPACE/GITHUB-PUBLIC/TuistProjects/Projects/Workbench",
+      "schemes" : [
+        {
+          "name" : "Workbench-Test",
+          "testActionTargets" : [
+            "Workbench"
+          ]
+        },
+        {
+          "name" : "Workbench-Prod",
+          "testActionTargets" : [
+            "Workbench"
+          ]
+        },
+        {
+          "name" : "Workbench-ODI",
+          "testActionTargets" : [
+            "Workbench"
+          ]
+        },
+        {
+          "name" : "WorkbenchTests-Test",
+          "testActionTargets" : [
+            "WorkbenchTests"
+          ]
+        },
+        {
+          "name" : "WorkbenchTests-Prod",
+          "testActionTargets" : [
+            "WorkbenchTests"
+          ]
+        },
+        {
+          "name" : "WorkbenchTests-ODI",
+          "testActionTargets" : [
+            "WorkbenchTests"
+          ]
+        }
+      ],
+      "targets" : [
+        {
+          "name" : "Workbench",
+          "product" : "app",
+          "sources" : [
+            "/Volumes/WORKSPACE/WORKSPACE/GITHUB-PUBLIC/TuistProjects/Projects/Workbench/Targets/Workbench/Sources/AppDelegate.swift"
+          ]
+        },
+        {
+          "name" : "WorkbenchTests",
+          "product" : "unit_tests",
+          "sources" : [
+            "/Volumes/WORKSPACE/WORKSPACE/GITHUB-PUBLIC/TuistProjects/Projects/Workbench/Targets/Workbench/Tests/AppTests.swift"
+          ]
+        }
+      ]
+    },
+    "/Volumes/WORKSPACE/WORKSPACE/GITHUB-PUBLIC/TuistProjects/Tuist/Dependencies/SwiftPackageManager/.build/checkouts/Kingfisher" : {
+      "isExternal" : true,
+      "name" : "Kingfisher",
+      "packages" : [
+
+      ],
+      "path" : "/Volumes/WORKSPACE/WORKSPACE/GITHUB-PUBLIC/TuistProjects/Tuist/Dependencies/SwiftPackageManager/.build/checkouts/Kingfisher",
+      "schemes" : [
+
+      ],
+      "targets" : [
+        {
+          "name" : "Kingfisher",
+          "product" : "staticFramework",
+          "sources" : [
+            "/Volumes/WORKSPACE/WORKSPACE/GITHUB-PUBLIC/TuistProjects/Tuist/Dependencies/SwiftPackageManager/.build/checkouts/Kingfisher/Sources/General/Kingfisher.swift",
+            "/Volumes/WORKSPACE/WORKSPACE/GITHUB-PUBLIC/TuistProjects/Tuist/Dependencies/SwiftPackageManager/.build/checkouts/Kingfisher/Sources/Extensions/ImageView+Kingfisher.swift",
+            "/Volumes/WORKSPACE/WORKSPACE/GITHUB-PUBLIC/TuistProjects/Tuist/Dependencies/SwiftPackageManager/.build/checkouts/Kingfisher/Sources/Extensions/NSButton+Kingfisher.swift",
+            "/Volumes/WORKSPACE/WORKSPACE/GITHUB-PUBLIC/TuistProjects/Tuist/Dependencies/SwiftPackageManager/.build/checkouts/Kingfisher/Sources/Networking/RetryStrategy.swift",
+            "/Volumes/WORKSPACE/WORKSPACE/GITHUB-PUBLIC/TuistProjects/Tuist/Dependencies/SwiftPackageManager/.build/checkouts/Kingfisher/Sources/Image/Placeholder.swift",
+            "/Volumes/WORKSPACE/WORKSPACE/GITHUB-PUBLIC/TuistProjects/Tuist/Dependencies/SwiftPackageManager/.build/checkouts/Kingfisher/Sources/Cache/MemoryStorage.swift",
+            "/Volumes/WORKSPACE/WORKSPACE/GITHUB-PUBLIC/TuistProjects/Tuist/Dependencies/SwiftPackageManager/.build/checkouts/Kingfisher/Sources/General/ImageSource/Resource.swift",
+            "/Volumes/WORKSPACE/WORKSPACE/GITHUB-PUBLIC/TuistProjects/Tuist/Dependencies/SwiftPackageManager/.build/checkouts/Kingfisher/Sources/Networking/SessionDataTask.swift",
+            "/Volumes/WORKSPACE/WORKSPACE/GITHUB-PUBLIC/TuistProjects/Tuist/Dependencies/SwiftPackageManager/.build/checkouts/Kingfisher/Sources/Utility/Box.swift",
+            "/Volumes/WORKSPACE/WORKSPACE/GITHUB-PUBLIC/TuistProjects/Tuist/Dependencies/SwiftPackageManager/.build/checkouts/Kingfisher/Sources/Utility/ExtensionHelpers.swift",
+            "/Volumes/WORKSPACE/WORKSPACE/GITHUB-PUBLIC/TuistProjects/Tuist/Dependencies/SwiftPackageManager/.build/checkouts/Kingfisher/Sources/Views/AnimatedImageView.swift",
+            "/Volumes/WORKSPACE/WORKSPACE/GITHUB-PUBLIC/TuistProjects/Tuist/Dependencies/SwiftPackageManager/.build/checkouts/Kingfisher/Sources/Networking/AuthenticationChallengeResponsable.swift",
+            "/Volumes/WORKSPACE/WORKSPACE/GITHUB-PUBLIC/TuistProjects/Tuist/Dependencies/SwiftPackageManager/.build/checkouts/Kingfisher/Sources/Networking/RequestModifier.swift",
+            "/Volumes/WORKSPACE/WORKSPACE/GITHUB-PUBLIC/TuistProjects/Tuist/Dependencies/SwiftPackageManager/.build/checkouts/Kingfisher/Sources/Extensions/TVMonogramView+Kingfisher.swift",
+            "/Volumes/WORKSPACE/WORKSPACE/GITHUB-PUBLIC/TuistProjects/Tuist/Dependencies/SwiftPackageManager/.build/checkouts/Kingfisher/Sources/General/KingfisherManager.swift",
+            "/Volumes/WORKSPACE/WORKSPACE/GITHUB-PUBLIC/TuistProjects/Tuist/Dependencies/SwiftPackageManager/.build/checkouts/Kingfisher/Sources/Networking/ImagePrefetcher.swift",
+            "/Volumes/WORKSPACE/WORKSPACE/GITHUB-PUBLIC/TuistProjects/Tuist/Dependencies/SwiftPackageManager/.build/checkouts/Kingfisher/Sources/Extensions/CPListItem+Kingfisher.swift",
+            "/Volumes/WORKSPACE/WORKSPACE/GITHUB-PUBLIC/TuistProjects/Tuist/Dependencies/SwiftPackageManager/.build/checkouts/Kingfisher/Sources/General/ImageSource/ImageDataProvider.swift",
+            "/Volumes/WORKSPACE/WORKSPACE/GITHUB-PUBLIC/TuistProjects/Tuist/Dependencies/SwiftPackageManager/.build/checkouts/Kingfisher/Sources/Cache/FormatIndicatedCacheSerializer.swift",
+            "/Volumes/WORKSPACE/WORKSPACE/GITHUB-PUBLIC/TuistProjects/Tuist/Dependencies/SwiftPackageManager/.build/checkouts/Kingfisher/Sources/Cache/Storage.swift",
+            "/Volumes/WORKSPACE/WORKSPACE/GITHUB-PUBLIC/TuistProjects/Tuist/Dependencies/SwiftPackageManager/.build/checkouts/Kingfisher/Sources/Image/ImageDrawing.swift",
+            "/Volumes/WORKSPACE/WORKSPACE/GITHUB-PUBLIC/TuistProjects/Tuist/Dependencies/SwiftPackageManager/.build/checkouts/Kingfisher/Sources/General/KFOptionsSetter.swift",
+            "/Volumes/WORKSPACE/WORKSPACE/GITHUB-PUBLIC/TuistProjects/Tuist/Dependencies/SwiftPackageManager/.build/checkouts/Kingfisher/Sources/Cache/DiskStorage.swift",
+            "/Volumes/WORKSPACE/WORKSPACE/GITHUB-PUBLIC/TuistProjects/Tuist/Dependencies/SwiftPackageManager/.build/checkouts/Kingfisher/Sources/Image/Filter.swift",
+            "/Volumes/WORKSPACE/WORKSPACE/GITHUB-PUBLIC/TuistProjects/Tuist/Dependencies/SwiftPackageManager/.build/checkouts/Kingfisher/Sources/Networking/RedirectHandler.swift",
+            "/Volumes/WORKSPACE/WORKSPACE/GITHUB-PUBLIC/TuistProjects/Tuist/Dependencies/SwiftPackageManager/.build/checkouts/Kingfisher/Sources/Utility/SizeExtensions.swift",
+            "/Volumes/WORKSPACE/WORKSPACE/GITHUB-PUBLIC/TuistProjects/Tuist/Dependencies/SwiftPackageManager/.build/checkouts/Kingfisher/Sources/Extensions/UIButton+Kingfisher.swift",
+            "/Volumes/WORKSPACE/WORKSPACE/GITHUB-PUBLIC/TuistProjects/Tuist/Dependencies/SwiftPackageManager/.build/checkouts/Kingfisher/Sources/SwiftUI/KFAnimatedImage.swift",
+            "/Volumes/WORKSPACE/WORKSPACE/GITHUB-PUBLIC/TuistProjects/Tuist/Dependencies/SwiftPackageManager/.build/checkouts/Kingfisher/Sources/Utility/String+MD5.swift",
+            "/Volumes/WORKSPACE/WORKSPACE/GITHUB-PUBLIC/TuistProjects/Tuist/Dependencies/SwiftPackageManager/.build/checkouts/Kingfisher/Sources/Utility/Result.swift",
+            "/Volumes/WORKSPACE/WORKSPACE/GITHUB-PUBLIC/TuistProjects/Tuist/Dependencies/SwiftPackageManager/.build/checkouts/Kingfisher/Sources/SwiftUI/KFImageRenderer.swift",
+            "/Volumes/WORKSPACE/WORKSPACE/GITHUB-PUBLIC/TuistProjects/Tuist/Dependencies/SwiftPackageManager/.build/checkouts/Kingfisher/Sources/Image/ImageFormat.swift",
+            "/Volumes/WORKSPACE/WORKSPACE/GITHUB-PUBLIC/TuistProjects/Tuist/Dependencies/SwiftPackageManager/.build/checkouts/Kingfisher/Sources/Networking/ImageDownloader.swift",
+            "/Volumes/WORKSPACE/WORKSPACE/GITHUB-PUBLIC/TuistProjects/Tuist/Dependencies/SwiftPackageManager/.build/checkouts/Kingfisher/Sources/Networking/ImageModifier.swift",
+            "/Volumes/WORKSPACE/WORKSPACE/GITHUB-PUBLIC/TuistProjects/Tuist/Dependencies/SwiftPackageManager/.build/checkouts/Kingfisher/Sources/SwiftUI/KFImageOptions.swift",
+            "/Volumes/WORKSPACE/WORKSPACE/GITHUB-PUBLIC/TuistProjects/Tuist/Dependencies/SwiftPackageManager/.build/checkouts/Kingfisher/Sources/Image/ImageProgressive.swift",
+            "/Volumes/WORKSPACE/WORKSPACE/GITHUB-PUBLIC/TuistProjects/Tuist/Dependencies/SwiftPackageManager/.build/checkouts/Kingfisher/Sources/SwiftUI/KFImageProtocol.swift",
+            "/Volumes/WORKSPACE/WORKSPACE/GITHUB-PUBLIC/TuistProjects/Tuist/Dependencies/SwiftPackageManager/.build/checkouts/Kingfisher/Sources/General/ImageSource/Source.swift",
+            "/Volumes/WORKSPACE/WORKSPACE/GITHUB-PUBLIC/TuistProjects/Tuist/Dependencies/SwiftPackageManager/.build/checkouts/Kingfisher/Sources/General/KingfisherOptionsInfo.swift",
+            "/Volumes/WORKSPACE/WORKSPACE/GITHUB-PUBLIC/TuistProjects/Tuist/Dependencies/SwiftPackageManager/.build/checkouts/Kingfisher/Sources/Utility/Runtime.swift",
+            "/Volumes/WORKSPACE/WORKSPACE/GITHUB-PUBLIC/TuistProjects/Tuist/Dependencies/SwiftPackageManager/.build/checkouts/Kingfisher/Sources/Extensions/WKInterfaceImage+Kingfisher.swift",
+            "/Volumes/WORKSPACE/WORKSPACE/GITHUB-PUBLIC/TuistProjects/Tuist/Dependencies/SwiftPackageManager/.build/checkouts/Kingfisher/Sources/SwiftUI/KFImage.swift",
+            "/Volumes/WORKSPACE/WORKSPACE/GITHUB-PUBLIC/TuistProjects/Tuist/Dependencies/SwiftPackageManager/.build/checkouts/Kingfisher/Sources/Cache/ImageCache.swift",
+            "/Volumes/WORKSPACE/WORKSPACE/GITHUB-PUBLIC/TuistProjects/Tuist/Dependencies/SwiftPackageManager/.build/checkouts/Kingfisher/Sources/SwiftUI/ImageContext.swift",
+            "/Volumes/WORKSPACE/WORKSPACE/GITHUB-PUBLIC/TuistProjects/Tuist/Dependencies/SwiftPackageManager/.build/checkouts/Kingfisher/Sources/Networking/ImageDownloaderDelegate.swift",
+            "/Volumes/WORKSPACE/WORKSPACE/GITHUB-PUBLIC/TuistProjects/Tuist/Dependencies/SwiftPackageManager/.build/checkouts/Kingfisher/Sources/Image/Image.swift",
+            "/Volumes/WORKSPACE/WORKSPACE/GITHUB-PUBLIC/TuistProjects/Tuist/Dependencies/SwiftPackageManager/.build/checkouts/Kingfisher/Sources/General/ImageSource/AVAssetImageDataProvider.swift",
+            "/Volumes/WORKSPACE/WORKSPACE/GITHUB-PUBLIC/TuistProjects/Tuist/Dependencies/SwiftPackageManager/.build/checkouts/Kingfisher/Sources/Cache/CacheSerializer.swift",
+            "/Volumes/WORKSPACE/WORKSPACE/GITHUB-PUBLIC/TuistProjects/Tuist/Dependencies/SwiftPackageManager/.build/checkouts/Kingfisher/Sources/Utility/CallbackQueue.swift",
+            "/Volumes/WORKSPACE/WORKSPACE/GITHUB-PUBLIC/TuistProjects/Tuist/Dependencies/SwiftPackageManager/.build/checkouts/Kingfisher/Sources/Image/GraphicsContext.swift",
+            "/Volumes/WORKSPACE/WORKSPACE/GITHUB-PUBLIC/TuistProjects/Tuist/Dependencies/SwiftPackageManager/.build/checkouts/Kingfisher/Sources/Networking/SessionDelegate.swift",
+            "/Volumes/WORKSPACE/WORKSPACE/GITHUB-PUBLIC/TuistProjects/Tuist/Dependencies/SwiftPackageManager/.build/checkouts/Kingfisher/Sources/General/KingfisherError.swift",
+            "/Volumes/WORKSPACE/WORKSPACE/GITHUB-PUBLIC/TuistProjects/Tuist/Dependencies/SwiftPackageManager/.build/checkouts/Kingfisher/Sources/Image/GIFAnimatedImage.swift",
+            "/Volumes/WORKSPACE/WORKSPACE/GITHUB-PUBLIC/TuistProjects/Tuist/Dependencies/SwiftPackageManager/.build/checkouts/Kingfisher/Sources/Networking/ImageDataProcessor.swift",
+            "/Volumes/WORKSPACE/WORKSPACE/GITHUB-PUBLIC/TuistProjects/Tuist/Dependencies/SwiftPackageManager/.build/checkouts/Kingfisher/Sources/Image/ImageProcessor.swift",
+            "/Volumes/WORKSPACE/WORKSPACE/GITHUB-PUBLIC/TuistProjects/Tuist/Dependencies/SwiftPackageManager/.build/checkouts/Kingfisher/Sources/SwiftUI/ImageBinder.swift",
+            "/Volumes/WORKSPACE/WORKSPACE/GITHUB-PUBLIC/TuistProjects/Tuist/Dependencies/SwiftPackageManager/.build/checkouts/Kingfisher/Sources/Utility/Delegate.swift",
+            "/Volumes/WORKSPACE/WORKSPACE/GITHUB-PUBLIC/TuistProjects/Tuist/Dependencies/SwiftPackageManager/.build/checkouts/Kingfisher/Sources/Views/Indicator.swift",
+            "/Volumes/WORKSPACE/WORKSPACE/GITHUB-PUBLIC/TuistProjects/Tuist/Dependencies/SwiftPackageManager/.build/checkouts/Kingfisher/Sources/Image/ImageTransition.swift",
+            "/Volumes/WORKSPACE/WORKSPACE/GITHUB-PUBLIC/TuistProjects/Tuist/Dependencies/SwiftPackageManager/.build/checkouts/Kingfisher/Sources/General/KF.swift",
+            "/Volumes/WORKSPACE/WORKSPACE/GITHUB-PUBLIC/TuistProjects/Tuist/Dependencies/SwiftPackageManager/.build/checkouts/Kingfisher/Sources/Extensions/NSTextAttachment+Kingfisher.swift"
+          ]
+        }
+      ]
+    },
+    "/Volumes/WORKSPACE/WORKSPACE/GITHUB-PUBLIC/TuistProjects/Tuist/Dependencies/SwiftPackageManager/.build/checkouts/SnapKit" : {
+      "isExternal" : true,
+      "name" : "SnapKit",
+      "packages" : [
+
+      ],
+      "path" : "/Volumes/WORKSPACE/WORKSPACE/GITHUB-PUBLIC/TuistProjects/Tuist/Dependencies/SwiftPackageManager/.build/checkouts/SnapKit",
+      "schemes" : [
+
+      ],
+      "targets" : [
+        {
+          "name" : "SnapKit",
+          "product" : "framework",
+          "sources" : [
+            "/Volumes/WORKSPACE/WORKSPACE/GITHUB-PUBLIC/TuistProjects/Tuist/Dependencies/SwiftPackageManager/.build/checkouts/SnapKit/Sources/ConstraintRelation.swift",
+            "/Volumes/WORKSPACE/WORKSPACE/GITHUB-PUBLIC/TuistProjects/Tuist/Dependencies/SwiftPackageManager/.build/checkouts/SnapKit/Sources/ConstraintDescription.swift",
+            "/Volumes/WORKSPACE/WORKSPACE/GITHUB-PUBLIC/TuistProjects/Tuist/Dependencies/SwiftPackageManager/.build/checkouts/SnapKit/Sources/ConstraintAttributes.swift",
+            "/Volumes/WORKSPACE/WORKSPACE/GITHUB-PUBLIC/TuistProjects/Tuist/Dependencies/SwiftPackageManager/.build/checkouts/SnapKit/Sources/Debugging.swift",
+            "/Volumes/WORKSPACE/WORKSPACE/GITHUB-PUBLIC/TuistProjects/Tuist/Dependencies/SwiftPackageManager/.build/checkouts/SnapKit/Sources/LayoutConstraint.swift",
+            "/Volumes/WORKSPACE/WORKSPACE/GITHUB-PUBLIC/TuistProjects/Tuist/Dependencies/SwiftPackageManager/.build/checkouts/SnapKit/Sources/ConstraintInsetTarget.swift",
+            "/Volumes/WORKSPACE/WORKSPACE/GITHUB-PUBLIC/TuistProjects/Tuist/Dependencies/SwiftPackageManager/.build/checkouts/SnapKit/Sources/ConstraintDirectionalInsetTarget.swift",
+            "/Volumes/WORKSPACE/WORKSPACE/GITHUB-PUBLIC/TuistProjects/Tuist/Dependencies/SwiftPackageManager/.build/checkouts/SnapKit/Sources/ConstraintInsets.swift",
+            "/Volumes/WORKSPACE/WORKSPACE/GITHUB-PUBLIC/TuistProjects/Tuist/Dependencies/SwiftPackageManager/.build/checkouts/SnapKit/Sources/ConstraintLayoutGuide.swift",
+            "/Volumes/WORKSPACE/WORKSPACE/GITHUB-PUBLIC/TuistProjects/Tuist/Dependencies/SwiftPackageManager/.build/checkouts/SnapKit/Sources/ConstraintMultiplierTarget.swift",
+            "/Volumes/WORKSPACE/WORKSPACE/GITHUB-PUBLIC/TuistProjects/Tuist/Dependencies/SwiftPackageManager/.build/checkouts/SnapKit/Sources/ConstraintMakerRelatable.swift",
+            "/Volumes/WORKSPACE/WORKSPACE/GITHUB-PUBLIC/TuistProjects/Tuist/Dependencies/SwiftPackageManager/.build/checkouts/SnapKit/Sources/ConstraintConfig.swift",
+            "/Volumes/WORKSPACE/WORKSPACE/GITHUB-PUBLIC/TuistProjects/Tuist/Dependencies/SwiftPackageManager/.build/checkouts/SnapKit/Sources/ConstraintLayoutGuide+Extensions.swift",
+            "/Volumes/WORKSPACE/WORKSPACE/GITHUB-PUBLIC/TuistProjects/Tuist/Dependencies/SwiftPackageManager/.build/checkouts/SnapKit/Sources/ConstraintMakerRelatable+Extensions.swift",
+            "/Volumes/WORKSPACE/WORKSPACE/GITHUB-PUBLIC/TuistProjects/Tuist/Dependencies/SwiftPackageManager/.build/checkouts/SnapKit/Sources/ConstraintLayoutSupport.swift",
+            "/Volumes/WORKSPACE/WORKSPACE/GITHUB-PUBLIC/TuistProjects/Tuist/Dependencies/SwiftPackageManager/.build/checkouts/SnapKit/Sources/ConstraintView+Extensions.swift",
+            "/Volumes/WORKSPACE/WORKSPACE/GITHUB-PUBLIC/TuistProjects/Tuist/Dependencies/SwiftPackageManager/.build/checkouts/SnapKit/Sources/ConstraintLayoutSupportDSL.swift",
+            "/Volumes/WORKSPACE/WORKSPACE/GITHUB-PUBLIC/TuistProjects/Tuist/Dependencies/SwiftPackageManager/.build/checkouts/SnapKit/Sources/ConstraintMakerPrioritizable.swift",
+            "/Volumes/WORKSPACE/WORKSPACE/GITHUB-PUBLIC/TuistProjects/Tuist/Dependencies/SwiftPackageManager/.build/checkouts/SnapKit/Sources/ConstraintPriorityTarget.swift",
+            "/Volumes/WORKSPACE/WORKSPACE/GITHUB-PUBLIC/TuistProjects/Tuist/Dependencies/SwiftPackageManager/.build/checkouts/SnapKit/Sources/ConstraintViewDSL.swift",
+            "/Volumes/WORKSPACE/WORKSPACE/GITHUB-PUBLIC/TuistProjects/Tuist/Dependencies/SwiftPackageManager/.build/checkouts/SnapKit/Sources/ConstraintConstantTarget.swift",
+            "/Volumes/WORKSPACE/WORKSPACE/GITHUB-PUBLIC/TuistProjects/Tuist/Dependencies/SwiftPackageManager/.build/checkouts/SnapKit/Sources/ConstraintView.swift",
+            "/Volumes/WORKSPACE/WORKSPACE/GITHUB-PUBLIC/TuistProjects/Tuist/Dependencies/SwiftPackageManager/.build/checkouts/SnapKit/Sources/ConstraintDirectionalInsets.swift",
+            "/Volumes/WORKSPACE/WORKSPACE/GITHUB-PUBLIC/TuistProjects/Tuist/Dependencies/SwiftPackageManager/.build/checkouts/SnapKit/Sources/ConstraintPriority.swift",
+            "/Volumes/WORKSPACE/WORKSPACE/GITHUB-PUBLIC/TuistProjects/Tuist/Dependencies/SwiftPackageManager/.build/checkouts/SnapKit/Sources/Constraint.swift",
+            "/Volumes/WORKSPACE/WORKSPACE/GITHUB-PUBLIC/TuistProjects/Tuist/Dependencies/SwiftPackageManager/.build/checkouts/SnapKit/Sources/ConstraintLayoutGuideDSL.swift",
+            "/Volumes/WORKSPACE/WORKSPACE/GITHUB-PUBLIC/TuistProjects/Tuist/Dependencies/SwiftPackageManager/.build/checkouts/SnapKit/Sources/Typealiases.swift",
+            "/Volumes/WORKSPACE/WORKSPACE/GITHUB-PUBLIC/TuistProjects/Tuist/Dependencies/SwiftPackageManager/.build/checkouts/SnapKit/Sources/ConstraintMakerEditable.swift",
+            "/Volumes/WORKSPACE/WORKSPACE/GITHUB-PUBLIC/TuistProjects/Tuist/Dependencies/SwiftPackageManager/.build/checkouts/SnapKit/Sources/UILayoutSupport+Extensions.swift",
+            "/Volumes/WORKSPACE/WORKSPACE/GITHUB-PUBLIC/TuistProjects/Tuist/Dependencies/SwiftPackageManager/.build/checkouts/SnapKit/Sources/ConstraintRelatableTarget.swift",
+            "/Volumes/WORKSPACE/WORKSPACE/GITHUB-PUBLIC/TuistProjects/Tuist/Dependencies/SwiftPackageManager/.build/checkouts/SnapKit/Sources/ConstraintOffsetTarget.swift",
+            "/Volumes/WORKSPACE/WORKSPACE/GITHUB-PUBLIC/TuistProjects/Tuist/Dependencies/SwiftPackageManager/.build/checkouts/SnapKit/Sources/ConstraintMakerFinalizable.swift",
+            "/Volumes/WORKSPACE/WORKSPACE/GITHUB-PUBLIC/TuistProjects/Tuist/Dependencies/SwiftPackageManager/.build/checkouts/SnapKit/Sources/ConstraintMaker.swift",
+            "/Volumes/WORKSPACE/WORKSPACE/GITHUB-PUBLIC/TuistProjects/Tuist/Dependencies/SwiftPackageManager/.build/checkouts/SnapKit/Sources/ConstraintDSL.swift",
+            "/Volumes/WORKSPACE/WORKSPACE/GITHUB-PUBLIC/TuistProjects/Tuist/Dependencies/SwiftPackageManager/.build/checkouts/SnapKit/Sources/ConstraintItem.swift",
+            "/Volumes/WORKSPACE/WORKSPACE/GITHUB-PUBLIC/TuistProjects/Tuist/Dependencies/SwiftPackageManager/.build/checkouts/SnapKit/Sources/LayoutConstraintItem.swift",
+            "/Volumes/WORKSPACE/WORKSPACE/GITHUB-PUBLIC/TuistProjects/Tuist/Dependencies/SwiftPackageManager/.build/checkouts/SnapKit/Sources/ConstraintMakerExtendable.swift"
+          ]
+        }
+      ]
+    }
+  }
+}
