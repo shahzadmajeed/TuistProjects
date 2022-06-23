@@ -7,44 +7,27 @@ import ProjectDescriptionHelpers
 
 //let projectSettings: Settings = .settings(configurations: BuildConfiguration.projectBuildConfigurations)
 //
-//let enabledConfiguration: ProjectDescription.Project.ProjectConfiguration = .configuration(
-//    options: .options(automaticSchemesOptions: .enabled(codeCoverageEnabled: true),
-//                      developmentRegion: "en",
-//                      disableBundleAccessors: false,
-//                      disableShowEnvironmentVarsInScriptPhases: false,
-//                      disableSynthesizedResourceAccessors: false,
-//                      textSettings: .textSettings(),
-//                      xcodeProjectName: nil))
-//
-//let disabledConfiguration: ProjectDescription.Project.ProjectConfiguration = .configuration(
-//    options: .options(automaticSchemesOptions: .disabled,
-//                      developmentRegion: "en",
-//                      disableBundleAccessors: true,
-//                      disableShowEnvironmentVarsInScriptPhases: true,
-//                      disableSynthesizedResourceAccessors: true,
-//                      textSettings: .textSettings(),
-//                      xcodeProjectName: nil))
+
+let projectOptions: ProjectDescription.Project.Options = .options(
+    automaticSchemesOptions: .enabled(codeCoverageEnabled: true),
+    developmentRegion: "en",
+    disableBundleAccessors: false,
+    disableShowEnvironmentVarsInScriptPhases: false,
+    disableSynthesizedResourceAccessors: false,
+    textSettings: .textSettings(),
+    xcodeProjectName: nil)
 
 let dependencies = Dependencies(
     carthage: [],
     swiftPackageManager: SwiftPackageManagerDependencies(
         [
-            .local(path: .relativeToRoot("Projects/SPMModules"))
+           .local(path: .relativeToRoot("Projects/SPMModules"))
         ],
         // productTypes: ["Feature1": .dynamicLibrary],
-        baseSettings: .settings(
-            configurations: [
-                .debug(name: "Test"),
-                .debug(name: "ODI"),
-                .release(name: "Prod")
-            ]
-        )/*,
-        projectConfigurations: [
-            "SPMModules": enabledConfiguration,
-//            "Kingfisher": disabledConfiguration,  // Default behavior. No need to specify
-//            "SnapKit": disabledConfiguration // Default behavior. No need to specify
-//             
-        ]*/
+        baseSettings: .projectSettings,
+        projectOptions: [
+            "SPMModules": projectOptions
+        ]
     ),
     platforms: [.iOS]
 )

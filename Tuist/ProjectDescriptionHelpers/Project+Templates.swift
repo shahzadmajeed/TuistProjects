@@ -11,7 +11,8 @@ extension Project {
                            platform: Platform,
                            deploymentTarget: DeploymentTarget,
                            additionalTargets: [String: [TargetDependency]],
-                           externalDependencies: [String]) -> Project {
+                           externalDependencies: [String],
+                           schemes: [Scheme]) -> Project {
         
         let dependencies: [TargetDependency] =
         additionalTargets
@@ -20,30 +21,26 @@ extension Project {
         externalDependencies
             .map { .external(name: $0) }
         
-        let targetSettings: Settings = .settings(configurations: BuildConfiguration.appBuildConfigurations)
-        let projectSettings: Settings = .settings(configurations: BuildConfiguration.projectBuildConfigurations)
         
         var targets = makeAppTargets(name: name,
                                      platform: platform,
                                      deploymentTarget: deploymentTarget,
                                      dependencies: dependencies,
-                                     settings: targetSettings)
+                                     settings: .targetSettings)
         
         targets += additionalTargets.flatMap { (target, dependencies) in
             makeFrameworkTargets(name: target,
                                  platform: platform,
                                  deploymentTarget: deploymentTarget,
                                  dependencies: dependencies,
-                                 settings: targetSettings)
+                                 settings: .targetSettings)
         }
         
-        let scheme: [Scheme] = targets.flatMap { Scheme.allSchemes(target: $0.name) }
-
         return Project(name: name,
                        organizationName: "tuist.io",
-                       settings: projectSettings,
+                       settings: .projectSettings,
                        targets: targets,
-                       schemes: scheme,
+                       schemes: schemes,
                        resourceSynthesizers: .default)
     }
     
